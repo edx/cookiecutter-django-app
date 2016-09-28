@@ -2,10 +2,10 @@
 
 from __future__ import absolute_import, unicode_literals
 
+import logging
 import re
 import sys
 
-import logging
 logging.basicConfig(level=logging.DEBUG)
 
 logger = logging.getLogger('pre_gen_project')  # pylint: disable=C0103

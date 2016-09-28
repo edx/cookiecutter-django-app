@@ -89,7 +89,7 @@ Generate a virtualenv and generate requirements files with dependencies
 pinned to current versions (make sure you're using pip 7 or later)::
 
     $ mkvirtualenv Blogging-for-humans
-    $ make pip-compile
+    $ make upgrade
 
 Create a GitHub repo and push it there::
 
@@ -117,10 +117,10 @@ Code has been written, but does it actually work? Let's find out!
 Register on PyPI
 ~~~~~~~~~~~~~~~~~
 
-Once you've got at least a prototype working and tests running, it's time to register the app on PyPI::
+Once you've got at least a prototype working and tests running, it's time to
+`register the application on PyPI`_.
 
-    python setup.py register
-
+.. _register the application on PyPI: https://packaging.python.org/distributing/#register-your-project
 
 Releasing on PyPI
 ~~~~~~~~~~~~~~~~~

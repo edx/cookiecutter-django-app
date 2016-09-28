@@ -17,7 +17,7 @@ MarkupSafe==0.23          # via jinja2
 pathtools==0.1.2          # via watchdog
 poyo==0.4.0               # via cookiecutter
 python-dateutil==2.5.3    # via arrow
-PyYAML==3.11              # via watchdog
+PyYAML==3.12              # via watchdog
 six==1.10.0               # via python-dateutil
 watchdog==0.8.3
 whichcraft==0.4.0         # via cookiecutter
