@@ -4,6 +4,11 @@ Cookiecutter Django Package
 
 .. image:: https://travis-ci.org/edx/cookiecutter-django-app.svg?branch=master
     :target: https://travis-ci.org/edx/cookiecutter-django-app
+    :alt: Travis
+
+.. image:: https://img.shields.io/github/license/edx/cookiecutter-django-app.svg
+    :target: https://github.com/edx/cookiecutter-django-app/blob/master/LICENSE.txt
+    :alt: License
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 
@@ -33,7 +38,11 @@ Usage
 
 First, create your empty repo on Github (in our example below, we would call
 it ``blogging_for_humans``) and set up your virtual environment with your
-favorite method.
+favorite method.  To request a new repo in the ``edx`` organization,
+`submit an ITSUPPORT ticket`_.  This ticket should also request that Travis
+and Codecov be enabled for the new repository.
+
+.. _submit an ITSUPPORT ticket: https://openedx.atlassian.net/servicedesk/customer/portal/1/create/50
 
 **Note**: Your project will be created with README.rst file containing a pypi
 badge, a travis-ci badge and a link to documentation on readthedocs.org. You
@@ -159,9 +168,10 @@ Reporting Security Issues
 
 Please do not report security issues in public. Please email security@edx.org
 
+Getting Help
+------------
 
-Mailing List and IRC Channel
-----------------------------
+Have a question about this repository, or about Open edX in general?  Please
+refer to this `list of resources`_ if you need any assistance.
 
-You can discuss this code on the `edx-code Google Group <https://groups.google.com/forum/#!forum/edx-code>`_
-or in the **testing** channel on the `Open edX Slack <https://openedx.slack.com>`_.
+.. _list of resources: https://open.edx.org/getting-help

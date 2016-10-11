@@ -77,7 +77,7 @@ def test_readme(cookies):
 
         readme_file = result.project.join('README.rst')
         readme_lines = [x.strip() for x in readme_file.readlines(cr=False)]
-        assert 'helloworld  |Travis|_ |Codecov|_' in readme_lines
+        assert 'helloworld' in readme_lines
         assert 'The full documentation is at https://helloworld.readthedocs.org.' in readme_lines
         setup_path = str(result.project.join('setup.py'))
         try:
