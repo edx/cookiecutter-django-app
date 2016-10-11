@@ -1,4 +1,4 @@
-.PHONY: bake help pip-compile quality replay requirements test validate watch
+.PHONY: bake help quality replay requirements test upgrade validate watch
 
 BAKE_OPTIONS=--no-input
 
@@ -9,12 +9,12 @@ help: ## display this help message
 bake: ## generate project using defaults
 	cookiecutter $(BAKE_OPTIONS) . --overwrite-if-exists
 
-pip-compile: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip-compile -o requirements/base.txt requirements/base.in
-	pip-compile -o requirements/dev.txt requirements/dev.in
-	pip-compile -o requirements/doc.txt requirements/doc.in
-	pip-compile -o requirements/test.txt requirements/test.in
-	pip-compile -o requirements/travis.txt requirements/travis.in
+upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+	pip-compile --upgrade -o requirements/base.txt requirements/base.in
+	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
+	pip-compile --upgrade -o requirements/doc.txt requirements/doc.in
+	pip-compile --upgrade -o requirements/test.txt requirements/test.in
+	pip-compile --upgrade -o requirements/travis.txt requirements/travis.in
 
 quality: ## check coding style with pycodestyle and pylint
 	tox -e quality

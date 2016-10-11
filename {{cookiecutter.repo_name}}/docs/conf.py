@@ -16,6 +16,8 @@ serve to show the default.
 from __future__ import absolute_import, unicode_literals
 
 import os
+import sys
+from subprocess import check_call
 
 # Configure Django for autodoc usage
 import django
@@ -76,8 +78,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = '{{ cookiecutter.project_name }}'
-copyright = '2016, edX Doc Team'  # pylint: disable=redefined-builtin
-author = 'edX Doc Team'
+copyright = '2016, edX Inc.'  # pylint: disable=redefined-builtin
+author = 'edX Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -287,7 +289,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, '{{ cookiecutter.repo_name }}.tex', '{{ cookiecutter.project_name }} Documentation',
-     'edX Doc Team', 'manual'),
+     'edX Inc.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -458,6 +460,25 @@ intersphinx_mapping = {
 }
 
 
+def on_init(app):  # pylint: disable=unused-argument
+    """
+    Run sphinx-apidoc after Sphinx initialization.
+
+    Read the Docs won't run tox or custom shell commands, so we need this to
+    avoid checking in the generated reStructuredText files.
+    """
+    docs_path = os.path.abspath(os.path.dirname(__file__))
+    root_path = os.path.abspath(os.path.join(docs_path, '..'))
+    apidoc_path = 'sphinx-apidoc'
+    if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
+        # If we are, assemble the path manually
+        bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
+        apidoc_path = os.path.join(bin_path, apidoc_path)
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, '{{ cookiecutter.app_name }}'),
+                os.path.join(root_path, '{{ cookiecutter.app_name }}/migrations')])
+
+
 def setup(app):
-    """Sphinx extension for applying some CSS overrides to the output theme."""
+    """Sphinx extension: run sphinx-apidoc and apply some CSS overrides to the output theme."""
+    app.connect('builder-inited', on_init)
     app.add_stylesheet('theme_overrides.css')

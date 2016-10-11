@@ -1,5 +1,5 @@
 .PHONY: clean compile_translations coverage docs dummy_translations extract_translations \
-	fake_translations help pull_translations push_translations quality requirements test test-all validate
+	fake_translations help pull_translations push_translations quality requirements test test-all upgrade validate
 
 .DEFAULT_GOAL := help
 
@@ -48,11 +48,11 @@ extract_translations: ## extract strings to be translated, outputting .mo files
 
 fake_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 
-pip-compile: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -q pip-tools
 	pip-compile --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
-	pip-compile --upgrade -o requirements/doc.txt requirements/doc.in
+	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in requirements/quality.in
+	pip-compile --upgrade -o requirements/doc.txt requirements/base.in requirements/doc.in
 	pip-compile --upgrade -o requirements/quality.txt requirements/quality.in
 	pip-compile --upgrade -o requirements/test.txt requirements/base.in requirements/test.in
 	pip-compile --upgrade -o requirements/travis.txt requirements/travis.in

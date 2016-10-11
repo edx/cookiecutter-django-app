@@ -6,6 +6,6 @@
 #
 pluggy==0.3.1             # via tox
 py==1.4.31                # via tox
-tox-battery==0.0.1
+tox-battery==0.2
 tox==2.3.1
-virtualenv==15.0.2        # via tox
+virtualenv==15.0.3        # via tox

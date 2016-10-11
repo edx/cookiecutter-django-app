@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements/dev.txt requirements/dev.in
 #
-astroid==1.4.7            # via pylint, pylint-celery, pylint-plugin-utils
+astroid==1.4.8            # via pylint, pylint-celery, pylint-plugin-utils
 click==6.6                # via pip-tools
 colorama==0.3.7           # via pylint
 edx-lint==0.5.1
@@ -15,10 +15,10 @@ pluggy==0.3.1             # via tox
 py==1.4.31                # via tox
 pylint-celery==0.3        # via edx-lint
 pylint-django==0.7.2      # via edx-lint
-pylint-plugin-utils==0.2.3  # via pylint-celery, pylint-django
+pylint-plugin-utils==0.2.4  # via pylint-celery, pylint-django
 pylint==1.5.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 six==1.10.0               # via astroid, edx-lint, pip-tools, pylint
-tox-battery==0.0.1
+tox-battery==0.2
 tox==2.3.1
-virtualenv==15.0.2        # via tox
+virtualenv==15.0.3        # via tox
 wrapt==1.10.8             # via astroid
