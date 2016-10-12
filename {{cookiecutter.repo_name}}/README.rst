@@ -1,14 +1,29 @@
-Part of `edX code`__.
+{{cookiecutter.project_name}}
+=============================
 
-__ http://code.edx.org/
+.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg
+    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
+    :alt: PyPI
 
-{{cookiecutter.project_name}}  |Travis|_ |Codecov|_
-===================================================
-.. |Travis| image:: https://travis-ci.org/edx/{{cookiecutter.repo_name}}.svg?branch=master
-.. _Travis: https://travis-ci.org/edx/{{cookiecutter.repo_name}}
+.. image:: https://travis-ci.org/edx/{{ cookiecutter.repo_name }}.svg?branch=master
+    :target: https://travis-ci.org/edx/{{ cookiecutter.repo_name }}
+    :alt: Travis
 
-.. |Codecov| image:: http://codecov.io/github/edx/{{cookiecutter.repo_name}}/coverage.svg?branch=master
-.. _Codecov: http://codecov.io/github/edx/{{cookiecutter.repo_name}}?branch=master
+.. image:: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}/coverage.svg?branch=master
+    :target: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}?branch=master
+    :alt: Codecov
+
+.. image:: http://{{ cookiecutter.repo_name }}.readthedocs.io/en/latest/?badge=latest
+    :target: http://{{ cookiecutter.repo_name }}.readthedocs.io/en/latest/
+    :alt: Documentation
+
+.. image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.repo_name }}.svg
+    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
+    :alt: Supported Python versions
+
+.. image:: https://img.shields.io/github/license/edx/{{ cookiecutter.repo_name }}.svg
+    :target: https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/LICENSE.txt
+    :alt: License
 
 The ``README.rst`` file should start with a brief description of the repository,
 which sets it in the context of other repositories under the ``edx``
@@ -52,9 +67,10 @@ Reporting Security Issues
 
 Please do not report security issues in public. Please email security@edx.org.
 
-Mailing List and IRC Channel
-----------------------------
+Getting Help
+------------
 
-You can discuss this code in the `edx-code Google Group`__ or in the ``#edx-code`` IRC channel on Freenode.
+Have a question about this repository, or about Open edX in general?  Please
+refer to this `list of resources`_ if you need any assistance.
 
-__ https://groups.google.com/forum/#!forum/edx-code
+.. _list of resources: https://open.edx.org/getting-help
