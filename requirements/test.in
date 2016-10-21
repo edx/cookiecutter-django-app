@@ -13,3 +13,4 @@ pytest-cookies            # pytest extension for cookiecutter testing
 readme_renderer           # Check README.rst for PyPI compatibility
 sh                        # Used to execute flake8 in tests
 sphinx_rtd_theme          # For pylint import checks of the generated conf.py
+doc8                      # reStructuredText style checker

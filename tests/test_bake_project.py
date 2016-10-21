@@ -189,7 +189,17 @@ def check_quality(result):
                 sh.pycodestyle(name)
                 if filename != 'setup.py':
                     sh.pydocstyle(name)
-                # Sanity check the generated Makefile
-                sh.make('help')
+                sh.isort(name, check_only=True)
             except sh.ErrorReturnCode as exc:
                 pytest.fail(str(exc))
+
+    tox_ini = result.project.join('tox.ini')
+    docs_build_dir = result.project.join('docs/_build')
+    try:
+        # Sanity check the generated Makefile
+        sh.make('help')
+        # quality check docs
+        sh.doc8(result.project.join("README.rst"), ignore_path=docs_build_dir, config=tox_ini)
+        sh.doc8(result.project.join("docs"), ignore_path=docs_build_dir, config=tox_ini)
+    except sh.ErrorReturnCode as exc:
+        pytest.fail(str(exc))
