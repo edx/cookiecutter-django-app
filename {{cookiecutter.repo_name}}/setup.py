@@ -47,7 +47,9 @@ setup(
         '{{ cookiecutter.app_name }}',
     ],
     include_package_data=True,
-    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" %}"django-model-utils>=2.0"{% endif %}],
+    install_requires=[
+        "Django>=1.8,<1.11"{% if cookiecutter.models != "Comma-separated list of models" %}, "django-model-utils>=2.0"{% endif %}
+    ],
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}

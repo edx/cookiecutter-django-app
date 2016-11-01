@@ -60,7 +60,7 @@ output/*/index.html
 # Sphinx
 docs/_build
 docs/modules.rst
-docs/{{ cookiecutter.app_name }}
+docs/{{ cookiecutter.app_name }}.rst
 
 # Private requirements
 requirements/private.in
