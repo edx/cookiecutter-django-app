@@ -61,6 +61,7 @@ output/*/index.html
 docs/_build
 docs/modules.rst
 docs/{{ cookiecutter.app_name }}.rst
+docs/{{ cookiecutter.app_name }}.*.rst
 
 # Private requirements
 requirements/private.in
