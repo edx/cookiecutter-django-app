@@ -43,6 +43,7 @@ dummy_translations: ## generate dummy translation (.po) files
 	cd {{cookiecutter.app_name}} && i18n_tool dummy
 
 extract_translations: ## extract strings to be translated, outputting .mo files
+    rm -rf docs/_build
 	./manage.py makemessages -l en -v1 -d django
 	./manage.py makemessages -l en -v1 -d djangojs
 
