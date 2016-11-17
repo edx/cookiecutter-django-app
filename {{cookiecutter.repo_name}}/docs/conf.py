@@ -50,6 +50,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.ifconfig',
+    'sphinxcontrib.napoleon'
 ]
 
 # A list of warning types to suppress arbitrary warning messages.
