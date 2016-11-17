@@ -19,6 +19,6 @@ pylint-plugin-utils==0.2.4  # via pylint-celery, pylint-django
 pylint==1.5.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 six==1.10.0               # via astroid, edx-lint, pip-tools, pylint
 tox-battery==0.2
-tox==2.4.1
-virtualenv==15.0.3        # via tox
+tox==2.5.0
+virtualenv==15.1.0        # via tox
 wrapt==1.10.8             # via astroid

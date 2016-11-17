@@ -10,13 +10,13 @@ binaryornot==0.4.0        # via cookiecutter
 chardet==2.3.0            # via binaryornot
 click==6.6                # via cookiecutter
 cookiecutter==1.4.0
-future==0.15.2            # via cookiecutter
+future==0.16.0            # via cookiecutter
 jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.8               # via cookiecutter, jinja2-time
 MarkupSafe==0.23          # via jinja2
 pathtools==0.1.2          # via watchdog
 poyo==0.4.0               # via cookiecutter
-python-dateutil==2.5.3    # via arrow
+python-dateutil==2.6.0    # via arrow
 PyYAML==3.12              # via watchdog
 six==1.10.0               # via python-dateutil
 watchdog==0.8.3
