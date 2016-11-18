@@ -16,6 +16,7 @@ def root(*args):
     """
     return join(abspath(dirname(__file__)), *args)
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

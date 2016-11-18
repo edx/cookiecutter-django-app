@@ -62,6 +62,9 @@ Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/
 Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
 
+PR description template can be found at
+`PR_TEMPLATE.md <https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/PR_TEMPLATE.md>`_
+
 Reporting Security Issues
 -------------------------
 
