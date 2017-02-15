@@ -13,7 +13,7 @@
     :target: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}?branch=master
     :alt: Codecov
 
-.. image:: http://{{ cookiecutter.repo_name }}.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/{{ cookiecutter.repo_name }}/badge/?version=latest
     :target: http://{{ cookiecutter.repo_name }}.readthedocs.io/en/latest/
     :alt: Documentation
 
