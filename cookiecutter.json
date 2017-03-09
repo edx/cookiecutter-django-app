@@ -1,10 +1,11 @@
 {
   "full_name": "Your full name here",
   "email": "you@edx.org",
-  "repo_name": "dj-package",
+  "project_title": "Your Project Title goes here",
+  "project_short_description": "Your project description goes here",
+  "repo_name": "{{ cookiecutter.project_title.lower()|replace(' ', '-') }}",
   "app_name": "{{ cookiecutter.repo_name.lower()|replace(' ', '_')|replace('-', '_') }}",
   "project_name": "{{ cookiecutter.repo_name }}",
-  "project_short_description": "Your project description goes here",
   "models": "Comma-separated list of models",
   "config_class_name": "{{ cookiecutter.app_name|replace('_', ' ')|title|replace(' ', '') }}Config",
   "version": "0.1.0",

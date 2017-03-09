@@ -62,8 +62,11 @@ Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/
 Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
 
-PR description template can be found at
-`PR_TEMPLATE.md <https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/PR_TEMPLATE.md>`_
+PR description template should be automatically applied if you are sending PR from github interface; otherwise you
+can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
+
+Issue report template should be automatically applied if you are sending it from github UI as well; otherwise you
+can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/.github/ISSUE_TEMPLATE.md>`_
 
 Reporting Security Issues
 -------------------------
