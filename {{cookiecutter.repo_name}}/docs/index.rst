@@ -14,9 +14,9 @@ Contents:
 
    readme
    getting_started
-   modules
    testing
    internationalization
+   modules
    changelog
 
 

@@ -1,3 +1,5 @@
+.. _chapter-testing:
+
 Testing
 =======
 
