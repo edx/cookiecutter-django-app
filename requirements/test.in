@@ -12,5 +12,6 @@ pytest-catchlog           # Show log output for test failures
 pytest-cookies            # pytest extension for cookiecutter testing
 readme_renderer           # Check README.rst for PyPI compatibility
 sh                        # Used to execute flake8 in tests
+Sphinx<1.5                # Documentation builder; restricted by https://github.com/rtfd/readthedocs.org/issues/2708
 sphinx_rtd_theme          # For pylint import checks of the generated conf.py
 doc8                      # reStructuredText style checker
