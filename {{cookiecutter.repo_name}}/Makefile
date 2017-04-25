@@ -67,6 +67,9 @@ test-all: ## run tests on every supported Python/Django combination
 
 validate: quality test ## run tests and quality checks
 
+selfcheck: ## check that the Makefile is well-formed
+	echo "The Makefile is well-formed."
+
 ## Localization targets
 
 extract_translations: ## extract strings to be translated, outputting .mo files
