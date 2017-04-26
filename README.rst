@@ -41,11 +41,12 @@ Usage
 
 First, create your empty repo on Github (in our example below, we would call
 it ``blogging_for_humans``) and set up your virtual environment with your
-favorite method.  To request a new repo in the ``edx`` organization,
-`submit an ITSUPPORT ticket`_.  This ticket should also request that Travis
-and Codecov be enabled for the new repository.
+favorite method.  To request a new repo in the ``edx`` organization, you will
+submit an ITSUPPORT ticket.  Details are in the `How to request a new GitHub
+repo`_ wiki page. This ticket should also request that Travis and Codecov be
+enabled for the new repository.
 
-.. _submit an ITSUPPORT ticket: https://openedx.atlassian.net/servicedesk/customer/portal/1/create/50
+.. _How to request a new GitHub repo: https://openedx.atlassian.net/wiki/pages/viewpage.action?pageId=70385719
 
 **Note**: Your project will be created with README.rst file containing a pypi
 badge, a travis-ci badge and a link to documentation on readthedocs.org. You
