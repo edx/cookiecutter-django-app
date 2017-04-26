@@ -2,13 +2,7 @@
 Cookiecutter Django Package
 ===========================
 
-.. image:: https://travis-ci.org/edx/cookiecutter-django-app.svg?branch=master
-    :target: https://travis-ci.org/edx/cookiecutter-django-app
-    :alt: Travis
-
-.. image:: https://img.shields.io/github/license/edx/cookiecutter-django-app.svg
-    :target: https://github.com/edx/cookiecutter-django-app/blob/master/LICENSE.txt
-    :alt: License
+|travis-badge| |license-badge|
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 If you're creating a standalone Django service, you should probably use
@@ -189,3 +183,12 @@ Have a question about this repository, or about Open edX in general?  Please
 refer to this `list of resources`_ if you need any assistance.
 
 .. _list of resources: https://open.edx.org/getting-help
+
+
+.. |travis-badge| image:: https://travis-ci.org/edx/cookiecutter-django-app.svg?branch=master
+    :target: https://travis-ci.org/edx/cookiecutter-django-app
+    :alt: Travis
+
+.. |license-badge| image:: https://img.shields.io/github/license/edx/cookiecutter-django-app.svg
+    :target: https://github.com/edx/cookiecutter-django-app/blob/master/LICENSE.txt
+    :alt: License
