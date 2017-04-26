@@ -1,29 +1,8 @@
 {{cookiecutter.project_name}}
 =============================
 
-.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg
-    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
-    :alt: PyPI
-
-.. image:: https://travis-ci.org/edx/{{ cookiecutter.repo_name }}.svg?branch=master
-    :target: https://travis-ci.org/edx/{{ cookiecutter.repo_name }}
-    :alt: Travis
-
-.. image:: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}/coverage.svg?branch=master
-    :target: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}?branch=master
-    :alt: Codecov
-
-.. image:: https://readthedocs.org/projects/{{ cookiecutter.repo_name }}/badge/?version=latest
-    :target: http://{{ cookiecutter.repo_name }}.readthedocs.io/en/latest/
-    :alt: Documentation
-
-.. image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.repo_name }}.svg
-    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
-    :alt: Supported Python versions
-
-.. image:: https://img.shields.io/github/license/edx/{{ cookiecutter.repo_name }}.svg
-    :target: https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/LICENSE.txt
-    :alt: License
+|pypi-badge| |travis-badge| |codecov-badge| |doc-badge| |pyversions-badge|
+|license-badge|
 
 The ``README.rst`` file should start with a brief description of the repository,
 which sets it in the context of other repositories under the ``edx``
@@ -80,3 +59,28 @@ Have a question about this repository, or about Open edX in general?  Please
 refer to this `list of resources`_ if you need any assistance.
 
 .. _list of resources: https://open.edx.org/getting-help
+
+
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg
+    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
+    :alt: PyPI
+
+.. |travis-badge| image:: https://travis-ci.org/edx/{{ cookiecutter.repo_name }}.svg?branch=master
+    :target: https://travis-ci.org/edx/{{ cookiecutter.repo_name }}
+    :alt: Travis
+
+.. |codecov-badge| image:: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}/coverage.svg?branch=master
+    :target: http://codecov.io/github/edx/{{ cookiecutter.repo_name }}?branch=master
+    :alt: Codecov
+
+.. |doc-badge| image:: https://readthedocs.org/projects/{{ cookiecutter.repo_name }}/badge/?version=latest
+    :target: http://{{ cookiecutter.repo_name }}.readthedocs.io/en/latest/
+    :alt: Documentation
+
+.. |pyversions-badge| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.repo_name }}.svg
+    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
+    :alt: Supported Python versions
+
+.. |license-badge| image:: https://img.shields.io/github/license/edx/{{ cookiecutter.repo_name }}.svg
+    :target: https://github.com/edx/{{ cookiecutter.repo_name }}/blob/master/LICENSE.txt
+    :alt: License
