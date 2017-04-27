@@ -1,5 +1,6 @@
-.PHONY: clean compile_translations coverage docs dummy_translations extract_translations \
-	fake_translations help pull_translations push_translations quality requirements test test-all upgrade validate
+.PHONY: clean compile_translations coverage docs dummy_translations \
+	extract_translations fake_translations help pull_translations push_translations \
+	quality requirements selfcheck test test-all upgrade validate
 
 .DEFAULT_GOAL := help
 
@@ -68,7 +69,7 @@ test-all: ## run tests on every supported Python/Django combination
 validate: quality test ## run tests and quality checks
 
 selfcheck: ## check that the Makefile is well-formed
-	echo "The Makefile is well-formed."
+	@echo "The Makefile is well-formed."
 
 ## Localization targets
 
