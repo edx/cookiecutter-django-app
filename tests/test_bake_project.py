@@ -4,13 +4,13 @@ Tests of the project generation output.
 
 from __future__ import absolute_import, print_function, unicode_literals
 
-import logging
 import logging.config
 import os
 import re
 from contextlib import contextmanager
 
 import pytest
+
 import sh
 from cookiecutter.utils import rmtree
 

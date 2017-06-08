@@ -20,9 +20,8 @@ import re
 import sys
 from subprocess import check_call
 
-import edx_theme
-
 import django
+import edx_theme
 from django.conf import settings
 from django.utils import six
 

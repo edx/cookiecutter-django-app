@@ -4,11 +4,14 @@ Database models for {{cookiecutter.app_name}}.
 """
 
 from __future__ import absolute_import, unicode_literals
-{% if cookiecutter.models != "Comma-separated list of models" %}
+
 # from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
 from model_utils.models import TimeStampedModel
+
+{% if cookiecutter.models != "Comma-separated list of models" %}
+
 {% for model in cookiecutter.models.replace(' ', '').split(',') %}
 
 @python_2_unicode_compatible
