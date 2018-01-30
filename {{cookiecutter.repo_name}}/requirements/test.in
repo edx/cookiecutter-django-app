@@ -1,6 +1,5 @@
 # Requirements for test runs.
 
 {% if cookiecutter.models != "Comma-separated list of models" %}django-model-utils        # Provides TimeStampedModel abstract base class{% endif %}
-pytest-catchlog           # Show log output for test failures
 pytest-cov                # pytest extension for code coverage statistics
 pytest-django             # pytest extension for better Django support

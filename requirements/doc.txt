@@ -4,10 +4,10 @@
 #
 #    pip-compile --output-file requirements/doc.txt requirements/doc.in
 #
-bleach==2.0.0             # via readme-renderer
-docutils==0.13.1          # via readme-renderer
-html5lib==0.999999999     # via bleach
+bleach==2.1.2             # via readme-renderer
+docutils==0.14            # via readme-renderer
+html5lib==1.0.1           # via bleach
 pygments==2.2.0           # via readme-renderer
 readme-renderer==17.2
-six==1.10.0               # via bleach, html5lib, readme-renderer
+six==1.11.0               # via bleach, html5lib, readme-renderer
 webencodings==0.5.1       # via html5lib
