@@ -35,10 +35,10 @@ Usage
 
 First, create your empty repo on Github (in our example below, we would call
 it ``blogging_for_humans``) and set up your virtual environment with your
-favorite method.  To request a new repo in the ``edx`` organization, you will
-submit an ITSUPPORT ticket.  Details are in the `How to request a new GitHub
-repo`_ wiki page. This ticket should also request that Travis and Codecov be
-enabled for the new repository.
+favorite method.  If you are an edX employee, request a new repo in the
+``edx`` organization by submitting an ITSUPPORT ticket.  Details are in the
+`How to request a new GitHub repo`_ wiki page. This ticket should also
+request that Travis and Codecov be enabled for the new repository.
 
 .. _How to request a new GitHub repo: https://openedx.atlassian.net/wiki/pages/viewpage.action?pageId=70385719
 
@@ -125,8 +125,8 @@ Register on PyPI
 ~~~~~~~~~~~~~~~~~
 
 Once you have at least a prototype working and tests running, it's time to
-register the application on PyPI.  `Open an IT General Request ticket`_ to do
-this, providing:
+register the application on PyPI.  If you are an edX employee,
+`Open an IT General Request ticket`_ to do this, providing:
 
 * The URL of the package's GitHub repository (ask for the ``deploy`` entry in
   ``.travis.yml`` to be updated)
@@ -136,8 +136,12 @@ this, providing:
 This avoids the need to distribute the password for the edx PyPI account too
 widely.
 
+If you are not an edX employee, you can follow the instructions in the Python
+Packaging User Guide on `uploading your project to PyPI`_.
+
 .. _Open an IT General Request ticket: https://openedx.atlassian.net/servicedesk/customer/portal/1/create/7
 .. _PyPI registration URL: https://packaging.python.org/distributing/#register-your-project
+.. _uploading your project to PyPI: https://packaging.python.org/distributing/#uploading-your-project-to-pypi
 
 Releasing on PyPI
 ~~~~~~~~~~~~~~~~~

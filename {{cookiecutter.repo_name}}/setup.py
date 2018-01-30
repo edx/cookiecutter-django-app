@@ -49,7 +49,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        "Django>=1.8,<1.11"{% if cookiecutter.models != "Comma-separated list of models" %}, "django-model-utils>=2.0"{% endif %}
+        "Django>=1.8,<2.1"{% if cookiecutter.models != "Comma-separated list of models" %}, "django-model-utils>=2.0"{% endif %}
     ],
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
@@ -60,8 +60,8 @@ setup(
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
         'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
-        'Framework :: Django :: 1.10',
+        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',{% if cookiecutter.open_source_license == "AGPL 3.0" %}
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',{% elif cookiecutter.open_source_license == "Apache Software License 2.0" %}
         'License :: OSI Approved :: Apache Software License',{% else %}
@@ -70,6 +70,6 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 )

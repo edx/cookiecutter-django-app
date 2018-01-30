@@ -1,17 +1,16 @@
 # Requirements for test runs
 
 caniusepython3            # Additional Python 3 compatibility pylint checks
-Django                    # For pylint import checks of the generated output
+Django<2.0                # For pylint import checks of the generated output; version capped until Python 2.7 is dropped
 django-model-utils        # For pylint import checks of the generated output
 edx-lint                  # edX pylint rules and plugins
 edx-sphinx-theme          # For pylint import checks of the generated output
 isort                     # to standardize order of imports
 pycodestyle               # PEP 8 compliance validation
 pydocstyle                # PEP 257 compliance validation
-pytest-catchlog           # Show log output for test failures
 pytest-cookies            # pytest extension for cookiecutter testing
 readme_renderer           # Check README.rst for PyPI compatibility
 sh                        # Used to execute flake8 in tests
-Sphinx<1.5                # Documentation builder; restricted by https://github.com/rtfd/readthedocs.org/issues/2708
+Sphinx                    # Documentation builder
 sphinx_rtd_theme          # For pylint import checks of the generated conf.py
 doc8                      # reStructuredText style checker
