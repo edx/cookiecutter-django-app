@@ -93,7 +93,7 @@ Enter the project and take a look around::
     $ ls
 
 Generate a virtualenv and generate requirements files with dependencies
-pinned to current versions (make sure you're using pip 7 or later)::
+pinned to current versions (make sure you're using pip 9.0.2+ and Python 3.6)::
 
     $ mkvirtualenv Blogging-for-humans
     $ make upgrade
