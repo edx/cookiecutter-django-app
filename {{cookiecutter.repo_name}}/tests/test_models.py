@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Tests for the `{{ cookiecutter.repo_name }}` models module.
+
+isort:skip_file
 """
 
 from __future__ import absolute_import, unicode_literals{% if cookiecutter.models != "Comma-separated list of models" %}{% for model in cookiecutter.models.replace(' ', '').split(',') %}
