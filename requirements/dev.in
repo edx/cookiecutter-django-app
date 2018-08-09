@@ -1,6 +1,5 @@
 # Additional requirements for development of this template
 
-edx-lint                  # For updating pylintrc
-pip-tools                 # Requirements file management
-tox                       # virtualenv management for tests
-tox-battery               # Makes tox aware of requirements file changes
+-r pip-tools.txt          # pip-tools and its dependencies, for managing requirements files
+-r test.txt               # Dependencies for testing and quality checks
+-r travis.txt             # tox and associated dependencies

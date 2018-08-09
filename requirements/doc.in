@@ -1,3 +1,0 @@
-# Requirements for documentation validation
-
-readme_renderer           # Validates README.rst for usage on PyPI
