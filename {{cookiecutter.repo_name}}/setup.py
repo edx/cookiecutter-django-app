@@ -25,6 +25,34 @@ def get_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
+def load_requirements(*requirements_paths):
+    """
+    Load all requirements from the specified requirements files.
+    Returns a list of requirement strings.
+    """
+    requirements = set()
+    for path in requirements_paths:
+        requirements.update(
+            line.split('#')[0].strip() for line in open(path).readlines()
+            if is_requirement(line.strip())
+        )
+    return list(requirements)
+
+
+def is_requirement(line):
+    """
+    Return True if the requirement line is a package requirement;
+    that is, it is not blank, a comment, a URL, or an included file.
+    """
+    return not (
+        line == '' or
+        line.startswith('-r') or
+        line.startswith('#') or
+        line.startswith('-e') or
+        line.startswith('git+')
+    )
+
+
 VERSION = get_version('{{ cookiecutter.app_name }}', '__init__.py')
 
 if sys.argv[-1] == 'tag':
@@ -48,9 +76,7 @@ setup(
         '{{ cookiecutter.app_name }}',
     ],
     include_package_data=True,
-    install_requires=[
-        "Django>=1.8,<2.1"{% if cookiecutter.models != "Comma-separated list of models" %}, "django-model-utils>=2.0"{% endif %}
-    ],
+    install_requires=load_requirements('requirements/base.in'),
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}

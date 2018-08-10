@@ -1,5 +1,7 @@
 # Requirements for test runs
 
+-r base.in                # Core dependencies for the cookiecutter
+
 caniusepython3            # Additional Python 3 compatibility pylint checks
 Django<2.0                # For pylint import checks of the generated output; version capped until Python 2.7 is dropped
 django-model-utils        # For pylint import checks of the generated output

@@ -189,7 +189,7 @@ def check_quality(result):
                 sh.pycodestyle(name)
                 if filename != 'setup.py':
                     sh.pydocstyle(name)
-                sh.isort(name, check_only=True)
+                sh.isort(name, check_only=True, diff=True)
             except sh.ErrorReturnCode as exc:
                 pytest.fail(str(exc))
 

@@ -29,6 +29,7 @@ pip-log.txt
 .cache/
 .coverage
 .coverage.*
+.pytest_cache
 .tox
 coverage.xml
 htmlcov/
