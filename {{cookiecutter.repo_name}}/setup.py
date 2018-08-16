@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=C0111,W6005,W6100
+"""
+Package metadata for {{ cookiecutter.app_name }}.
+"""
 from __future__ import absolute_import, print_function
 
 import os
@@ -28,7 +31,9 @@ def get_version(*file_paths):
 def load_requirements(*requirements_paths):
     """
     Load all requirements from the specified requirements files.
-    Returns a list of requirement strings.
+
+    Returns:
+        list: Requirements file relative path strings
     """
     requirements = set()
     for path in requirements_paths:
@@ -41,8 +46,10 @@ def load_requirements(*requirements_paths):
 
 def is_requirement(line):
     """
-    Return True if the requirement line is a package requirement;
-    that is, it is not blank, a comment, a URL, or an included file.
+    Return True if the requirement line is a package requirement.
+
+    Returns:
+        bool: True if the line is not blank, a comment, a URL, or an included file
     """
     return not (
         line == '' or
