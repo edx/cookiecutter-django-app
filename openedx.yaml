@@ -1,7 +1,7 @@
 # openedx.yaml
 
 ---
-owner: edx/platform-team
+owner: edx/core
 nick: cookiecutter-django-app
 tags:
     - tools
@@ -13,3 +13,5 @@ oeps:
     oep-5:
         state: False
         reason: Doesn't require any services to be started
+    oep-30:
+        applicable: False

@@ -1,0 +1,19 @@
+# This is a Code Annotations automatically-generated Django model safelist file.
+# These models must be annotated as follows in order to be counted in the coverage report.
+# See https://code-annotations.readthedocs.io/en/latest/safelist.html for more information.
+#
+# fake_app_1.FakeModelName:
+#    ".. no_pii::": "This model has no PII"
+# fake_app_2.FakeModel2:
+#    ".. choice_annotation::": foo, bar, baz
+
+auth.Group:
+  ".. no_pii:": "This model has no PII"
+auth.Permission:
+  ".. no_pii:": "This model has no PII"
+auth.User:
+  ".. pii:": "Contains username, password, and email address, must be retired in the consumer of this app"
+  ".. pii_types:" : username, email_address, password
+  ".. pii_retirement:" : consumer_api
+contenttypes.ContentType:
+  ".. no_pii:": "This model has no PII"

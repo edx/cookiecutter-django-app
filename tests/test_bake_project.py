@@ -12,6 +12,7 @@ from contextlib import contextmanager
 
 import pytest
 import sh
+import six
 from cookiecutter.utils import rmtree
 
 LOGGING_CONFIG = {
@@ -55,7 +56,7 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
     try:
         yield result
     finally:
-        rmtree(str(result.project))
+        rmtree(six.text_type(result.project))
 
 
 def test_bake_selecting_license(cookies):
@@ -79,11 +80,11 @@ def test_readme(cookies):
         readme_lines = [x.strip() for x in readme_file.readlines(cr=False)]
         assert 'helloworld' in readme_lines
         assert 'The full documentation is at https://helloworld.readthedocs.org.' in readme_lines
-        setup_path = str(result.project.join('setup.py'))
+        setup_path = six.text_type(result.project.join('setup.py'))
         try:
             sh.python(setup_path, 'check', restructuredtext=True, strict=True)
         except sh.ErrorReturnCode as exc:
-            pytest.fail(str(exc))
+            pytest.fail(six.text_type(exc))
 
 
 def test_models(cookies):
@@ -177,8 +178,8 @@ def test_quality_with_models(cookies):
 
 def check_quality(result):
     """Run quality tests on the given generated output."""
-    for dirpath, _dirnames, filenames in os.walk(str(result.project)):
-        pylintrc = str(result.project.join('pylintrc'))
+    for dirpath, _dirnames, filenames in os.walk(six.text_type(result.project)):
+        pylintrc = six.text_type(result.project.join('pylintrc'))
         for filename in filenames:
             name = os.path.join(dirpath, filename)
             if not name.endswith('.py'):
@@ -190,7 +191,7 @@ def check_quality(result):
                 sh.pydocstyle(name)
                 sh.isort(name, check_only=True, diff=True)
             except sh.ErrorReturnCode as exc:
-                pytest.fail(str(exc))
+                pytest.fail(six.text_type(exc))
 
     tox_ini = result.project.join('tox.ini')
     docs_build_dir = result.project.join('docs/_build')
@@ -201,4 +202,35 @@ def check_quality(result):
         sh.doc8(result.project.join("README.rst"), ignore_path=docs_build_dir, config=tox_ini)
         sh.doc8(result.project.join("docs"), ignore_path=docs_build_dir, config=tox_ini)
     except sh.ErrorReturnCode as exc:
-        pytest.fail(str(exc))
+        pytest.fail(six.text_type(exc))
+
+
+@pytest.mark.parametrize(
+    "extra_context",
+    [
+        {},  # No models to generate.
+        {'models': 'ChocolateChip,Zimsterne', 'app_name': 'cookies'},  # Two models to generate
+    ],
+)
+def test_pii_annotations(cookies, extra_context):
+    """
+    Test that the pii_check make target works correctly.
+    """
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
+        with inside_dir(six.text_type(result.project)):
+            try:
+                sh.make('upgrade')  # first run make upgrade to populate requirements/test.txt
+                sh.make('pii_check')
+            except sh.ErrorReturnCode as exc:
+                # uncovered models are expected IFF we generated any models via the cookiecutter.
+                expected_uncovered_models = 0
+                if 'models' in extra_context:
+                    # count the number of (unannotated) models the cookiecutter should generate.
+                    expected_uncovered_models = len(extra_context['models'].split(','))
+                expected_message = 'Coverage found {} uncovered models:'.format(expected_uncovered_models)
+                if expected_message not in six.text_type(exc.stdout):
+                    # First, print the stdout/stderr attrs, otherwise sh will truncate the output
+                    # guaranteeing that all we see is useless tox setup.
+                    print(exc.stdout)
+                    print(exc.stderr)
+                    pytest.fail(six.text_type(exc))
