@@ -32,6 +32,9 @@ pip-log.txt
 coverage.xml
 htmlcov/
 
+# PII annotation reports
+pii_report
+
 # Translations
 *.mo
 
