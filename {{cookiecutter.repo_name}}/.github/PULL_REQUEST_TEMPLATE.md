@@ -1,4 +1,4 @@
-**Description:** Describe in a couple of sentence what this PR adds
+**Description:** Describe in a couple of sentences what this PR adds
 
 **JIRA:** Link to JIRA ticket
 
@@ -31,7 +31,7 @@ instructions.
 
 **Post merge:**
 - [ ] Create a tag
-- [ ] Check new version is pushed to PyPi after tag-triggered build is 
+- [ ] Check new version is pushed to PyPI after tag-triggered build is 
       finished.
 - [ ] Delete working branch (if not needed anymore)
 
