@@ -132,16 +132,6 @@ def test_app_config(cookies):
         assert re.search(pattern, apps_file.read(), re.MULTILINE)
 
 
-def test_authors(cookies):
-    """The generated AUTHORS file should contain the appropriate entry."""
-    extra_context = {'full_name': 'Cookie McCookieface', 'email': 'cookie@edx.org'}
-    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
-
-        authors_file = result.project.join('AUTHORS')
-        authors_text = authors_file.read()
-        assert 'Cookie McCookieface <cookie@edx.org>' in authors_text
-
-
 def test_manifest(cookies):
     """The generated MANIFEST.in should pass a sanity check."""
     extra_context = {'app_name': 'cookie_lover'}
