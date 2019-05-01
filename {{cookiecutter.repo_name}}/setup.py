@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=C0111,W6005,W6100
+# pylint: disable=W6005,W6100
 """
 Package metadata for {{ cookiecutter.app_name }}.
 """
@@ -64,7 +64,7 @@ VERSION = get_version('{{ cookiecutter.app_name }}', '__init__.py')
 
 if sys.argv[-1] == 'tag':
     print("Tagging the version on github:")
-    os.system("git tag -a %s -m 'version %s'" % (VERSION, VERSION))
+    os.system("git tag -a %s -m 'version %s'" % (VERSION, VERSION))  # pylint: disable=unicode-format-string
     os.system("git push --tags")
     sys.exit()
 
