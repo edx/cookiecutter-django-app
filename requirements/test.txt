@@ -32,13 +32,13 @@ edx-sphinx-theme==1.4.0
 enum34==1.1.6             # via astroid
 funcsigs==1.0.2           # via pytest
 future==0.17.1            # via cookiecutter
-futures==3.2.0            # via caniusepython3, isort
+futures==3.2.0 ; python_version == "2.7"  # via caniusepython3, isort
 idna==2.8                 # via requests
 imagesize==1.1.0          # via sphinx
 isort==4.3.18
 jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.10.1            # via cookiecutter, jinja2-time, sphinx
-lazy-object-proxy==1.3.1  # via astroid
+lazy-object-proxy==1.4.0  # via astroid
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via pylint
 more-itertools==5.0.0     # via pytest
@@ -46,19 +46,19 @@ packaging==19.0           # via caniusepython3, sphinx
 pathlib2==2.3.3           # via pytest
 pathtools==0.1.2          # via watchdog
 pbr==5.2.0                # via stevedore
-pluggy==0.9.0             # via pytest
+pluggy==0.11.0            # via pytest
 poyo==0.4.2               # via cookiecutter
 py==1.8.0                 # via pytest
 pycodestyle==2.5.0
 pydocstyle==3.0.0
-pygments==2.3.1           # via readme-renderer, sphinx
+pygments==2.4.0           # via readme-renderer, sphinx
 pylint-celery==0.3        # via edx-lint
 pylint-django==0.7.2      # via edx-lint
 pylint-plugin-utils==0.5  # via pylint-celery, pylint-django
 pylint==1.7.6             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.0          # via packaging
 pytest-cookies==0.3.0
-pytest==4.4.1             # via pytest-cookies
+pytest==4.4.2             # via pytest-cookies
 python-dateutil==2.8.0    # via arrow
 pytz==2019.1              # via babel, django
 pyyaml==5.1               # via watchdog
