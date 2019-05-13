@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=C0111,W6005,W6100
+# pylint: disable=open-builtin,native-string
 """
 Package metadata for {{ cookiecutter.app_name }}.
 """
@@ -51,20 +51,14 @@ def is_requirement(line):
     Returns:
         bool: True if the line is not blank, a comment, a URL, or an included file
     """
-    return not (
-        line == '' or
-        line.startswith('-r') or
-        line.startswith('#') or
-        line.startswith('-e') or
-        line.startswith('git+')
-    )
+    return line and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
 
 
 VERSION = get_version('{{ cookiecutter.app_name }}', '__init__.py')
 
 if sys.argv[-1] == 'tag':
     print("Tagging the version on github:")
-    os.system("git tag -a %s -m 'version %s'" % (VERSION, VERSION))
+    os.system(u"git tag -a %s -m 'version %s'" % (VERSION, VERSION))
     os.system("git push --tags")
     sys.exit()
 
