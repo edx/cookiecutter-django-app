@@ -35,10 +35,10 @@ future==0.17.1            # via cookiecutter
 futures==3.2.0 ; python_version == "2.7"  # via caniusepython3, isort
 idna==2.8                 # via requests
 imagesize==1.1.0          # via sphinx
-isort==4.3.18
+isort==4.3.19
 jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.10.1            # via cookiecutter, jinja2-time, sphinx
-lazy-object-proxy==1.4.0  # via astroid
+lazy-object-proxy==1.4.1  # via astroid
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via pylint
 more-itertools==5.0.0     # via pytest
@@ -58,7 +58,7 @@ pylint-plugin-utils==0.5  # via pylint-celery, pylint-django
 pylint==1.7.6             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.0          # via packaging
 pytest-cookies==0.3.0
-pytest==4.4.2             # via pytest-cookies
+pytest==4.5.0             # via pytest-cookies
 python-dateutil==2.8.0    # via arrow
 pytz==2019.1              # via babel, django
 pyyaml==5.1               # via watchdog
@@ -68,7 +68,7 @@ restructuredtext-lint==1.3.0  # via doc8
 scandir==1.10.0           # via pathlib2
 sh==1.12.14
 singledispatch==3.4.0.3   # via astroid, pylint
-six==1.12.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, more-itertools, packaging, pathlib2, pydocstyle, pylint, pytest, python-dateutil, readme-renderer, singledispatch, sphinx, stevedore
+six==1.12.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, packaging, pathlib2, pydocstyle, pylint, pytest, python-dateutil, readme-renderer, singledispatch, sphinx, stevedore
 snowballstemmer==1.2.1    # via pydocstyle, sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==1.8.5
@@ -77,6 +77,7 @@ stevedore==1.30.1         # via doc8
 typing==3.6.6             # via sphinx
 urllib3==1.24.3           # via requests
 watchdog==0.9.0
+wcwidth==0.1.7            # via pytest
 webencodings==0.5.1       # via bleach
 whichcraft==0.5.2         # via cookiecutter
 wrapt==1.11.1             # via astroid
