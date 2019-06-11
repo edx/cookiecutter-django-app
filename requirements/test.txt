@@ -28,7 +28,7 @@ django-model-utils==3.1.2
 django==1.11.21
 doc8==0.8.0
 docutils==0.14            # via doc8, readme-renderer, restructuredtext-lint, sphinx
-edx-lint==1.2.1
+edx-lint==1.3.0
 edx-sphinx-theme==1.4.0
 enum34==1.1.6             # via astroid
 funcsigs==1.0.2           # via pytest
@@ -63,14 +63,14 @@ pytest-cookies==0.3.0
 pytest==4.6.2             # via pytest-cookies
 python-dateutil==2.8.0    # via arrow
 pytz==2019.1              # via babel, django
-pyyaml==5.1               # via watchdog
+pyyaml==5.1.1             # via watchdog
 readme-renderer==24.0
 requests==2.22.0          # via caniusepython3, cookiecutter, sphinx
 restructuredtext-lint==1.3.0  # via doc8
 scandir==1.10.0           # via pathlib2
 sh==1.12.14
 singledispatch==3.4.0.3   # via astroid, pylint
-six==1.12.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, more-itertools, packaging, pathlib2, pydocstyle, pylint, pytest, python-dateutil, readme-renderer, singledispatch, sphinx, stevedore
+six==1.12.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, packaging, pathlib2, pydocstyle, pylint, pytest, python-dateutil, readme-renderer, singledispatch, sphinx, stevedore
 snowballstemmer==1.2.1    # via pydocstyle, sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==1.8.5
