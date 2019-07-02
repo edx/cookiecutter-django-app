@@ -25,7 +25,7 @@ contextlib2==0.5.5        # via importlib-metadata
 cookiecutter==1.6.0
 distlib==0.2.9.post0      # via caniusepython3
 django-model-utils==3.2.0
-django==1.11.21
+django==1.11.22
 doc8==0.8.0
 docutils==0.14            # via doc8, readme-renderer, restructuredtext-lint, sphinx
 edx-lint==1.3.0
@@ -37,7 +37,7 @@ futures==3.2.0 ; python_version == "2.7"  # via caniusepython3, isort
 idna==2.8                 # via requests
 imagesize==1.1.0          # via sphinx
 importlib-metadata==0.18  # via pluggy, pytest
-isort==4.3.20
+isort==4.3.21
 jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.10.1            # via cookiecutter, jinja2-time, sphinx
 lazy-object-proxy==1.4.1  # via astroid
@@ -45,7 +45,7 @@ markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via pylint
 more-itertools==5.0.0     # via pytest
 packaging==19.0           # via caniusepython3, pytest, sphinx
-pathlib2==2.3.3           # via importlib-metadata, pytest
+pathlib2==2.3.4           # via importlib-metadata, pytest
 pathtools==0.1.2          # via watchdog
 pbr==5.3.1                # via stevedore
 pluggy==0.12.0            # via pytest
@@ -60,7 +60,7 @@ pylint-plugin-utils==0.5  # via pylint-celery, pylint-django
 pylint==1.7.6             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.0          # via packaging
 pytest-cookies==0.3.0
-pytest==4.6.3             # via pytest-cookies
+pytest==4.6.4             # via pytest-cookies
 python-dateutil==2.8.0    # via arrow
 pytz==2019.1              # via babel, django
 pyyaml==5.1.1             # via watchdog
@@ -71,7 +71,7 @@ scandir==1.10.0           # via pathlib2
 sh==1.12.14
 singledispatch==3.4.0.3   # via astroid, pylint
 six==1.12.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, packaging, pathlib2, pydocstyle, pylint, pytest, python-dateutil, readme-renderer, singledispatch, sphinx, stevedore
-snowballstemmer==1.2.1    # via pydocstyle, sphinx
+snowballstemmer==1.9.0    # via pydocstyle, sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==1.8.5
 sphinxcontrib-websupport==1.1.2  # via sphinx
