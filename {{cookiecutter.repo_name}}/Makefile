@@ -72,14 +72,14 @@ selfcheck: ## check that the Makefile is well-formed
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	rm -rf docs/_build
-	cd {{cookiecutter.repo_name}} && ../manage.py makemessages -l en -v1 -d django
-	cd {{cookiecutter.repo_name}} && ../manage.py makemessages -l en -v1 -d djangojs
+	cd {{cookiecutter.app_name}} && ../manage.py makemessages -l en -v1 -d django
+	cd {{cookiecutter.app_name}} && ../manage.py makemessages -l en -v1 -d djangojs
 
 compile_translations: ## compile translation files, outputting .po files for each supported language
-	cd {{cookiecutter.repo_name}} && ../manage.py compilemessages
+	cd {{cookiecutter.app_name}} && ../manage.py compilemessages
 
 detect_changed_source_translations:
-	cd {{cookiecutter.repo_name}} && i18n_tool changed
+	cd {{cookiecutter.app_name}} && i18n_tool changed
 
 pull_translations: ## pull translations from Transifex
 	tx pull -af --mode reviewed
