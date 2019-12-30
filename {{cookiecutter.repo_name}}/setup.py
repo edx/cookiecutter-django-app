@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=open-builtin,native-string
 """
 Package metadata for {{ cookiecutter.app_name }}.
 """
