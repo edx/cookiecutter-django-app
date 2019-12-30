@@ -1,20 +1,22 @@
 # Config file for automatic testing at travis-ci.org
+# To connect a new edX repository to Travis, see
+# https://openedx.atlassian.net/wiki/spaces/EdxOps/pages/157464369/How+to+connect+a+repository+to+Travis+CI
 
 language: python
 
 python:
-  - 2.7
+  - 3.5
   - 3.6
+  - 3.7
+  - 3.8
 
 env:
-  - TOXENV=django18
   - TOXENV=django111
   - TOXENV=django20
+  - TOXENV=django21
+  - TOXENV=django22
 
 matrix:
-  exclude:
-    - python: 2.7
-      env: TOXENV=django20
   include:
     - python: 3.6
       env: TOXENV=quality
@@ -25,7 +27,7 @@ matrix:
 
 cache:
   - pip
-  
+
 before_install:
   - pip install --upgrade pip
 
@@ -38,11 +40,11 @@ script:
 after_success:
   - codecov
 
-# Set password via "travis encrypt --add deploy.password"; for details, see
+# Set token via "travis encrypt --add deploy.password"; for details, see
 # https://docs.travis-ci.com/user/deployment/pypi
 deploy:
   provider: pypi
-  user: edx
+  user: "__token__"
   distributions: sdist bdist_wheel
   on:
     tags: true

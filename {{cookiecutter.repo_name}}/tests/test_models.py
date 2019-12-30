@@ -4,7 +4,7 @@
 Tests for the `{{ cookiecutter.repo_name }}` models module.
 """
 
-from __future__ import absolute_import, unicode_literals{% if cookiecutter.models != "Comma-separated list of models" %}{% for model in cookiecutter.models.replace(' ', '').split(',') %}
+{% if cookiecutter.models != "Comma-separated list of models" %}{% for model in cookiecutter.models.replace(' ', '').split(',') %}
 
 
 class Test{{ model }}(object):
