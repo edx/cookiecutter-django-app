@@ -17,6 +17,7 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	pip install -qr requirements/pip-tools.txt
 	# Make sure to compile files after any other files they include!
 	$(PIP_COMPILE) -o requirements/pip-tools.txt requirements/pip-tools.in
+	$(PIP_COMPILE) -o requirements/base.txt requirements/base.in
 	$(PIP_COMPILE) -o requirements/test.txt requirements/test.in
 	$(PIP_COMPILE) -o requirements/travis.txt requirements/travis.in
 	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in

@@ -173,7 +173,6 @@ def check_quality(result):
                 continue
             try:
                 sh.pylint(name, rcfile=pylintrc)
-                sh.pylint(name, py3k=True)
                 sh.pycodestyle(name)
                 sh.pydocstyle(name)
                 sh.isort(name, check_only=True, diff=True)

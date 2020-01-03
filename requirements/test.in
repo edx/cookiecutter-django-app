@@ -3,7 +3,6 @@
 
 -r base.txt               # Core dependencies for the cookiecutter
 
-caniusepython3            # Additional Python 3 compatibility pylint checks
 Django                    # For pylint import checks of the generated output
 django-model-utils        # For pylint import checks of the generated output
 edx-lint                  # edX pylint rules and plugins
