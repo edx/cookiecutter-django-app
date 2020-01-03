@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=open-builtin,native-string
 """
 Package metadata for {{ cookiecutter.app_name }}.
 """
-from __future__ import absolute_import, print_function
-
 import os
 import re
 import sys
@@ -78,6 +75,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=load_requirements('requirements/base.in'),
+    python_requires=">=3.5",
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
@@ -88,14 +86,17 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
         'Intended Audience :: Developers',{% if cookiecutter.open_source_license == "AGPL 3.0" %}
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',{% elif cookiecutter.open_source_license == "Apache Software License 2.0" %}
         'License :: OSI Approved :: Apache Software License',{% else %}
         'License :: Other/Proprietary License',{% endif %}
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ],
 )

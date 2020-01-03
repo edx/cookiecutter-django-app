@@ -1,10 +1,9 @@
 # Requirements for test runs
 -c constraints.txt
 
--r base.in                # Core dependencies for the cookiecutter
+-r base.txt               # Core dependencies for the cookiecutter
 
-caniusepython3            # Additional Python 3 compatibility pylint checks
-Django<2.0                # For pylint import checks of the generated output; version capped until Python 2.7 is dropped
+Django                    # For pylint import checks of the generated output
 django-model-utils        # For pylint import checks of the generated output
 edx-lint                  # edX pylint rules and plugins
 edx-sphinx-theme          # For pylint import checks of the generated output
