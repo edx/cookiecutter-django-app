@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Database models for {{cookiecutter.app_name}}.
-"""{% if cookiecutter.models != "Comma-separated list of models" %}
+"""
+{%- if cookiecutter.models != "Comma-separated list of models" %}
 # from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from model_utils.models import TimeStampedModel
-{% for model in cookiecutter.models.replace(' ', '').split(',') %}
+{%- for model in cookiecutter.models.replace(' ', '').split(',') %}
+
 
 @python_2_unicode_compatible
 class {{ model.strip() }}(TimeStampedModel):
@@ -25,5 +27,5 @@ class {{ model.strip() }}(TimeStampedModel):
         """
         # TODO: return a string appropriate for the data fields
         return '<{{ model.strip() }}, ID: {}>'.format(self.id)
-{% endfor %}{%else %}
-{% endif %}
+{%- endfor -%}
+{%- endif %}
