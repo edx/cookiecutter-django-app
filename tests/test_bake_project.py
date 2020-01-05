@@ -150,30 +150,28 @@ def test_quality_with_models(cookies):
 
 def check_quality(result):
     """Run quality tests on the given generated output."""
-    for dirpath, _dirnames, filenames in os.walk(str(result.project)):
-        pylintrc = str(result.project.join('pylintrc'))
-        for filename in filenames:
-            name = os.path.join(dirpath, filename)
-            if not name.endswith('.py'):
-                continue
-            try:
-                sh.pylint(name, rcfile=pylintrc)
-                sh.pycodestyle(name)
-                sh.pydocstyle(name)
-                sh.isort(name, check_only=True, diff=True)
-            except sh.ErrorReturnCode as exc:
-                pytest.fail(str(exc))
+    with inside_dir(str(result.project)):
+        for dirpath, _dirnames, filenames in os.walk("."):
+            for filename in filenames:
+                name = os.path.join(dirpath, filename)
+                if not name.endswith('.py'):
+                    continue
+                try:
+                    sh.pylint(name)
+                    sh.pycodestyle(name)
+                    sh.pydocstyle(name)
+                    sh.isort(name, check_only=True, diff=True)
+                except sh.ErrorReturnCode as exc:
+                    pytest.fail(str(exc))
 
-    tox_ini = result.project.join('tox.ini')
-    docs_build_dir = result.project.join('docs/_build')
-    try:
-        # Sanity check the generated Makefile
-        sh.make('help')
-        # quality check docs
-        sh.doc8(result.project.join("README.rst"), ignore_path=docs_build_dir, config=tox_ini)
-        sh.doc8(result.project.join("docs"), ignore_path=docs_build_dir, config=tox_ini)
-    except sh.ErrorReturnCode as exc:
-        pytest.fail(str(exc))
+        try:
+            # Sanity check the generated Makefile
+            sh.make('help')
+            # quality check docs
+            sh.doc8("README.rst", ignore_path="docs/_build")
+            sh.doc8("docs", ignore_path="docs/_build")
+        except sh.ErrorReturnCode as exc:
+            pytest.fail(str(exc))
 
 
 @pytest.mark.parametrize(
