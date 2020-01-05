@@ -88,10 +88,14 @@ setup(
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
         'Framework :: Django :: 2.2',
-        'Intended Audience :: Developers',{% if cookiecutter.open_source_license == "AGPL 3.0" %}
-        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',{% elif cookiecutter.open_source_license == "Apache Software License 2.0" %}
-        'License :: OSI Approved :: Apache Software License',{% else %}
-        'License :: Other/Proprietary License',{% endif %}
+        'Intended Audience :: Developers',
+        {%- if cookiecutter.open_source_license == "AGPL 3.0" %}
+        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+        {%- elif cookiecutter.open_source_license == "Apache Software License 2.0" %}
+        'License :: OSI Approved :: Apache Software License',
+        {%- else %}
+        'License :: Other/Proprietary License',
+        {%- endif %}
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
