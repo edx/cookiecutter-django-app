@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 {{ cookiecutter.app_name }} Django application initialization.
 """

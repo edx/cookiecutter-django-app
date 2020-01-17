@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=invalid-name
 """
 {{ cookiecutter.project_name }} documentation build configuration file.
