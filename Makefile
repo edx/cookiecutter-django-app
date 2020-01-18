@@ -37,7 +37,7 @@ test: ## run tests on every supported Python version
 	tox
 
 validate: ## run tests and quality checks
-	tox -e quality,py35,py36
+	tox -e quality,py35,py38
 
 watch: bake ## generate project using defaults and watch for changes
 	watchmedo shell-command -p '*.*' -c 'make bake -e BAKE_OPTIONS=$(BAKE_OPTIONS)' -W -R -D \{{cookiecutter.repo_name}}/
