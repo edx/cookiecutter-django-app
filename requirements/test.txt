@@ -36,7 +36,6 @@ markupsafe==1.1.1
 mccabe==0.6.1             # via pylint
 more-itertools==8.1.0     # via pytest, zipp
 packaging==20.0           # via pytest, sphinx
-pathlib2==2.3.5           # via pytest
 pathtools==0.1.2
 pbr==5.4.4                # via stevedore
 pluggy==0.13.1            # via pytest
