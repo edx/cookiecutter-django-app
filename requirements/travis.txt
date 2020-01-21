@@ -11,7 +11,7 @@ packaging==20.0           # via tox
 pluggy==0.13.1            # via tox
 py==1.8.1                 # via tox
 pyparsing==2.4.6          # via packaging
-six==1.13.0               # via packaging, tox
+six==1.14.0               # via packaging, tox
 toml==0.10.0              # via tox
 tox-battery==0.5.1
 tox==3.14.3

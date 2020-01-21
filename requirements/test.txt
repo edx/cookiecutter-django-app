@@ -59,7 +59,7 @@ readme-renderer==24.0
 requests==2.22.0
 restructuredtext-lint==1.3.0  # via doc8
 sh==1.12.14
-six==1.13.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, packaging, pathlib2, pytest, python-dateutil, readme-renderer, stevedore
+six==1.14.0               # via astroid, bleach, doc8, edx-lint, edx-sphinx-theme, packaging, pathlib2, pytest, python-dateutil, readme-renderer, stevedore
 snowballstemmer==2.0.0    # via pydocstyle, sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==2.3.1
