@@ -31,7 +31,7 @@ Features
 * Basic model generation
 
 Usage
-------
+-----
 
 First, create your empty repo on Github (in our example below, we would call
 it ``blogging_for_humans``) and set up your virtual environment with your
@@ -110,7 +110,7 @@ Now take a look at your repo. Awesome, right?
 
 
 Address TODOs
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Look around in the new repo for sections marked `TODO`.  Here are a few known
 places where they may appear:
@@ -126,7 +126,7 @@ Finally, it's time to write the code!!!
 
 
 Running Tests
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Code has been written, but does it actually work? Let's find out!
 
@@ -138,19 +138,19 @@ Code has been written, but does it actually work? Let's find out!
 
 
 Github Checks
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-On your first PR, ensure Travis and Codecov checks are running.  
+On your first PR, ensure Travis and Codecov checks are running.
 
 If Travis is not running, you can activate manually at https://travis-ci.org/edx/YOUR-REPO-NAME
 
 If Codecov is not running, complete an ITSUPPORT ticket.
 
 Register on PyPI
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 Once you have at least a prototype working and tests running, it's time to
-register the application on PyPI.  
+register the application on PyPI.
 
 If you are an edX employee,
 `Open a Devops General Request ticket`_ to do this.  Simply ask for the Travis
@@ -177,7 +177,7 @@ module's ``__init__.py`` file, update ``CHANGELOG.rst`` accordingly, and run::
 
 
 Add to Django Packages
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have a release, and assuming you have an account there, just go to https://www.djangopackages.com/packages/add/ and add it there.
 
@@ -194,9 +194,10 @@ Please see ``LICENSE.txt`` for details.
 How to Contribute
 -----------------
 
-Contributions are very welcome. The easiest way is to fork this repo, and then
-make a pull request from your fork. The first time you make a pull request, you
-may be asked to sign a Contributor Agreement.
+Contributions are very welcome.
+Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
+Even though they were written with ``edx-platform`` in mind, the guidelines
+should be followed for all Open edX projects.
 
 
 Reporting Security Issues
@@ -207,7 +208,7 @@ Please do not report security issues in public. Please email security@edx.org
 Getting Help
 ------------
 
-Have a question about this repository, or about Open edX in general?  Please
+Have a question about this repository, or about the Open edX project in general?  Please
 refer to this `list of resources`_ if you need any assistance.
 
 .. _list of resources: https://open.edx.org/getting-help
