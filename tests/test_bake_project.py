@@ -129,7 +129,7 @@ def test_manifest(cookies):
     with bake_in_temp_dir(cookies, extra_context=extra_context):
 
         manifest_text = Path("MANIFEST.in").read_text()
-        assert 'recursive-include cookie_lover *.html *.png *.gif *js *.css *jpg *jpeg *svg *py' in manifest_text
+        assert 'recursive-include cookie_lover *.html' in manifest_text
 
 
 def test_setup_py(cookies):
