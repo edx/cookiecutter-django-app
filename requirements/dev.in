@@ -4,3 +4,6 @@
 -r pip-tools.txt          # pip-tools and its dependencies, for managing requirements files
 -r test.txt               # Dependencies for testing and quality checks
 -r travis.txt             # tox and associated dependencies
+
+# Waiting for https://github.com/signalpillar/tox-battery/issues/19
+# tox-battery               # Makes tox aware of requirements file changes
