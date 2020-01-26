@@ -7,3 +7,5 @@
 
 diff-cover                # Changeset diff test coverage
 edx-i18n-tools            # For i18n_tool dummy
+# Waiting for https://github.com/signalpillar/tox-battery/issues/19
+# tox-battery               # Makes tox aware of requirements file changes
