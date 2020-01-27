@@ -14,3 +14,8 @@ cookiecutter<=1.6.0
 
 # We want to stick with Django 2
 django<3.0
+
+# These only make sense on Mac
+pyobjc-core; sys_platform == 'darwin'
+pyobjc-framework-cocoa; sys_platform == 'darwin'
+pyobjc-framework-fsevents; sys_platform == 'darwin'
