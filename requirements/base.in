@@ -2,4 +2,4 @@
 -c constraints.txt
 
 cookiecutter              # Utility to generate a package from this template
-watchdog                  # Used in the "watch" and "replay" make targets
+watchdog[watchmedo]       # Used in the "watch" and "replay" make targets
