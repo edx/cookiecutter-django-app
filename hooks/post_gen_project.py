@@ -18,9 +18,14 @@ CDA_remove = [
     "Dockerfile",
     "docker-compose.yml",
     "CONTRIBUTING.md",
+    "requirements/production.in",
+    "requirements/optional.txt",
+    "requirements/monitoring",
     "{{cookiecutter.sub_dir_name}}/settings",
     "{{cookiecutter.sub_dir_name}}/apps",
     "{{cookiecutter.sub_dir_name}}/static",
+    "{{cookiecutter.sub_dir_name}}/docker_gunicorn_configuration.py",
+    "{{cookiecutter.sub_dir_name}}/wsgi.py",
 
 ]
 
@@ -29,6 +34,10 @@ CDI_remove = [
 "MANIFEST.in",
 "setup.py",
 "tox.ini",
+"locale",
+"test_utils",
+"tests",
+"test_settings.py",
 "{{cookiecutter.sub_dir_name}}/models.py",
 "{{cookiecutter.sub_dir_name}}/apps.py",
 ]
