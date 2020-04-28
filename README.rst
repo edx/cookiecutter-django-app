@@ -116,7 +116,7 @@ Look around in the new repo for sections marked `TODO`.  Here are a few known
 places where they may appear:
 
 * `openedx.yaml`: Various OEP states need to be updated.  See `OEP-2\: Repository Metadata`_ for more information.
-* `{{cookiecutter.app_name}}/models.py`: If you specified any models to generate, the various docstrings need to be filled in, and PII annotations need to be added.  See `OEP-30\: PII Markup and Auditing`_ for more information on PII annotations.
+* `{{cookiecutter.sub_dir_name}}/models.py`: If you specified any models to generate, the various docstrings need to be filled in, and PII annotations need to be added.  See `OEP-30\: PII Markup and Auditing`_ for more information on PII annotations.
 * `tests/test_models.py`: Fill in docstrings here too.
 
 .. _OEP-2\: Repository Metadata: https://open-edx-proposals.readthedocs.io/en/latest/oep-0002-bp-repo-metadata.html

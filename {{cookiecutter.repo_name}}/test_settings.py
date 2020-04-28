@@ -29,13 +29,13 @@ DATABASES = {
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    '{{ cookiecutter.app_name }}',
+    '{{ cookiecutter.sub_dir_name }}',
 )
 
 LOCALE_PATHS = [
-    root('{{ cookiecutter.app_name }}', 'conf', 'locale'),
+    root('{{ cookiecutter.sub_dir_name }}', 'conf', 'locale'),
 ]
 
-ROOT_URLCONF = '{{ cookiecutter.app_name }}.urls'
+ROOT_URLCONF = '{{ cookiecutter.sub_dir_name }}.urls'
 
 SECRET_KEY = 'insecure-secret-key'

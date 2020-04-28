@@ -10,7 +10,7 @@ logger = logging.getLogger('pre_gen_project')  # pylint: disable=C0103
 
 APP_REGEX = r'^[_a-zA-Z][_a-zA-Z0-9]+$'
 
-APP_NAME = '{{cookiecutter.app_name}}'
+APP_NAME = '{{cookiecutter.sub_dir_name}}'
 
 if not re.match(APP_REGEX, APP_NAME):
     logger.error('Invalid value for app_name "{}"'.format(APP_NAME))

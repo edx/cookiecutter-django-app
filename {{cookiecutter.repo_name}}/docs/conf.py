@@ -38,7 +38,7 @@ def get_version(*file_paths):
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(REPO_ROOT)
 
-VERSION = get_version('../{{ cookiecutter.app_name }}', '__init__.py')
+VERSION = get_version('../{{ cookiecutter.sub_dir_name }}', '__init__.py')
 
 # Configure Django for autodoc usage
 settings.configure()
@@ -492,8 +492,8 @@ def on_init(app):  # pylint: disable=unused-argument
         # If we are, assemble the path manually
         bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
         apidoc_path = os.path.join(bin_path, apidoc_path)
-    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, '{{ cookiecutter.app_name }}'),
-                os.path.join(root_path, '{{ cookiecutter.app_name }}/migrations')])
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, '{{ cookiecutter.sub_dir_name }}'),
+                os.path.join(root_path, '{{ cookiecutter.sub_dir_name }}/migrations')])
 
 
 def setup(app):

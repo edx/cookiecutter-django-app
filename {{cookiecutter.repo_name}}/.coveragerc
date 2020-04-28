@@ -1,7 +1,7 @@
 [run]
 branch = True
 data_file = .coverage
-source={{cookiecutter.app_name}}
+source={{cookiecutter.sub_dir_name}}
 omit =
     test_settings
     *migrations*

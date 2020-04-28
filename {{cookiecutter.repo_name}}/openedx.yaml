@@ -1,7 +1,7 @@
 # openedx.yaml
 
 ---
-owner: {{ cookiecutter.owner }}
+owner: {{ cookiecutter.owner_name }}
 nick: {{ cookiecutter.repo_name }}
 tags:
     - tools

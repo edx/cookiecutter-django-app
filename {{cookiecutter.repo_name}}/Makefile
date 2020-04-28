@@ -75,14 +75,14 @@ selfcheck: ## check that the Makefile is well-formed
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	rm -rf docs/_build
-	cd {{cookiecutter.app_name}} && ../manage.py makemessages -l en -v1 -d django
-	cd {{cookiecutter.app_name}} && ../manage.py makemessages -l en -v1 -d djangojs
+	cd {{cookiecutter.sub_dir_name}} && ../manage.py makemessages -l en -v1 -d django
+	cd {{cookiecutter.sub_dir_name}} && ../manage.py makemessages -l en -v1 -d djangojs
 
 compile_translations: ## compile translation files, outputting .po files for each supported language
-	cd {{cookiecutter.app_name}} && ../manage.py compilemessages
+	cd {{cookiecutter.sub_dir_name}} && ../manage.py compilemessages
 
 detect_changed_source_translations:
-	cd {{cookiecutter.app_name}} && i18n_tool changed
+	cd {{cookiecutter.sub_dir_name}} && i18n_tool changed
 
 pull_translations: ## pull translations from Transifex
 	tx pull -af --mode reviewed
@@ -91,7 +91,7 @@ push_translations: ## push source translation files (.po) from Transifex
 	tx push -s
 
 dummy_translations: ## generate dummy translation (.po) files
-	cd {{cookiecutter.app_name}} && i18n_tool dummy
+	cd {{cookiecutter.sub_dir_name}} && i18n_tool dummy
 
 build_dummy_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 

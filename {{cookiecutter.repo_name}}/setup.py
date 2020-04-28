@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Package metadata for {{ cookiecutter.app_name }}.
+Package metadata for {{ cookiecutter.sub_dir_name }}.
 """
 import os
 import re
@@ -50,7 +50,7 @@ def is_requirement(line):
     return line and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
 
 
-VERSION = get_version('{{ cookiecutter.app_name }}', '__init__.py')
+VERSION = get_version('{{ cookiecutter.sub_dir_name }}', '__init__.py')
 
 if sys.argv[-1] == 'tag':
     print("Tagging the version on github:")
@@ -70,7 +70,7 @@ setup(
     author_email='oscm@edx.org',
     url='https://github.com/edx/{{ cookiecutter.repo_name }}',
     packages=[
-        '{{ cookiecutter.app_name }}',
+        '{{ cookiecutter.sub_dir_name }}',
     ],
     include_package_data=True,
     install_requires=load_requirements('requirements/base.in'),

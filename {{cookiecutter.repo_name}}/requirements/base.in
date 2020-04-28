@@ -2,6 +2,3 @@
 -c constraints.txt
 
 Django>=1.11              # Web application framework
-{% if cookiecutter.models != "Comma-separated list of models" -%}
-django-model-utils        # Provides TimeStampedModel abstract base class
-{%- endif %}
