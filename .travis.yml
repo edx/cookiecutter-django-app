@@ -4,20 +4,22 @@ sudo: false
 
 language: python
 
+python:
+  - 3.5
+  - 3.8
+
+envs:
+  - TOXENV=quality
+
 matrix:
   include:
     - python: 3.5
       env: TOXENV=py35
-    - python: 3.6
-      env: TOXENV=py36
-    - python: 3.7
-      env: TOXENV=py37
     - python: 3.8
       env: TOXENV=py38
-    - python: 3.5
-      env: TOXENV=quality
 
 install:
+  - pip install pip==20.0.2
   - pip install -r requirements/travis.txt
 
 script:
