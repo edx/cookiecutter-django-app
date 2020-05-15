@@ -1,7 +1,9 @@
 
 This repository has been archived and is no longer supported—use it at your own risk. This repository may depend on out-of-date libraries with security issues, and security updates will not be provided. Pull requests against this repository will also not be merged.
 
-This cookiecutter has been moved to `edx-cookiecutter`_.
+This cookiecutter has been moved to `edx-cookiecutter`_
+
+.. _edx-cookecutter: https://github.com/edx/edx-cookiecutters
 
 ===========================
 Cookiecutter Django Package
@@ -217,7 +219,6 @@ Have a question about this repository, or about the Open edX project in general?
 refer to this `list of resources`_ if you need any assistance.
 
 .. _list of resources: https://open.edx.org/getting-help
-.. _edx-cookecutter: https://github.com/edx/edx-cookiecutters
 
 
 .. |travis-badge| image:: https://travis-ci.org/edx/cookiecutter-django-app.svg?branch=master
