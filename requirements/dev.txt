@@ -75,7 +75,7 @@ sphinxcontrib-qthelp==1.0.3  # via -r requirements/test.txt, sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via -r requirements/test.txt, sphinx
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 stevedore==1.32.0         # via -r requirements/test.txt, doc8
-toml==0.10.0              # via -r requirements/travis.txt, tox
+toml==0.10.1              # via -r requirements/travis.txt, tox
 tox-battery==0.5.2        # via -r requirements/dev.in
 tox==3.15.0               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/test.txt, astroid
